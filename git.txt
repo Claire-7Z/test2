@@ -1,0 +1,33 @@
+【git命令】
+git init	初始化git仓库
+git add [路径或文件名]	添加到版本库
+git commit -a -m "提交说明"	提交到版本库
+-a 添加过版本库的文件可以直接用
+-m 直接添加说明，若不加，则会进入vi编辑状态添加多行说明
+git status	查看文件状态
+git log	--oneline	查看提交日志
+git reflog 	查看命令历史
+--oneline 一行显示
+git diff --staged	查看修改的内容
+--staged 
+git diff HEAD -- [文件名]	查看工作区与版本库的区别
+git reset --hard [commit_id]	切换历史版本
+
+git reset HEAD [文件名]		暂存区的修改回退到工作区
+git checkout -- [文件名]	丢弃工作区的修改
+
+git rm [文件名]		删除文件
+
+先创建SSH Key
+ssh-keygen -t rsa -C "youremail@example.com"
+登陆GitHub，打开“Account settings”，“SSH Keys”页面：
+然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+
+git remote add [别名] [远程仓库地址]	与远程仓库建立连接
+git remote -v   查看连接仓库
+git remote rm [别名]	删除与仓库连接
+git push -u [别名] [分支名]	提交到远程仓库
+-u 首次提交远程仓库加
+
+git clone [远程仓库地址]	克隆远程库到本地
+
